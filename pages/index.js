@@ -53,12 +53,8 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
 
       <Flex flexWrap="wrap" justifyContent="center">
         {propertiesForRent.map((property) => (
-          <div className="property-card">
-            <Property
-              property={property}
-              key={property.id}
-              className="property-card"
-            />
+          <div className="property-card" key={property.id}>
+            <Property property={property} className="property-card" />
           </div>
         ))}
       </Flex>
@@ -76,8 +72,8 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
 
       <Flex flexWrap="wrap" justifyContent="center">
         {propertiesForSale.map((property) => (
-          <div className="property-card">
-            <Property property={property} key={property.id} />
+          <div className="property-card" key={property.id}>
+            <Property property={property} />
           </div>
         ))}
       </Flex>
